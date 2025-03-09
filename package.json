@@ -1,0 +1,44 @@
+{
+	"name": "song-harvester",
+	"version": "1.0.0",
+	"main": "./src/main.js",
+	"scripts": {
+		"start": "electron .",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder --win",
+		"postinstall": "electron-builder install-app-deps"
+	},
+	"build": {
+		"appId": "io.zdeneklach.songharvester",
+		"productName": "Song Harvester",
+		"copyright": "Copyright © 2024 Zdenek Lach",
+		"directories": {
+			"output": "dist",
+			"buildResources": "build"
+		},
+		"win": {
+			"target": "nsis",
+			"icon": "build/icon.ico",
+			"sign": false
+		},
+		"nsis": {
+			"oneClick": false,
+			"perMachine": false,
+			"allowToChangeInstallationDirectory": true,
+			"deleteAppDataOnUninstall": true
+		},
+		"extraResources": [
+			{
+				"from": "ffmpeg.exe",
+				"to": "ffmpeg.exe"
+			},
+			{
+				"from": "yt-dlp_x86.exe",
+				"to": "yt-dlp_x86.exe"
+			}
+		]
+	},
+	"dependencies": {
+		"song-harvester": "file:"
+	}
+}

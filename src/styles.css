@@ -1,0 +1,141 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --dark-bg: #1a1a1a;
+    --dark-text: #f8f9fa;
+    --dark-primary: #0a58ca;
+}
+
+.dark-mode {
+    --bg-color: var(--dark-bg);
+    --text-color: var(--dark-text);
+    --primary-color: var(--dark-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    transition: 0.3s;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar.active {
+    width: 280px;
+}
+
+.sidebar-header {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Main Content */
+.main-content {
+    transition: margin-left 0.3s;
+}
+
+/* Dark Mode Toggle */
+#themeToggle {
+    font-size: 1.25rem;
+}
+
+/* Console Output */
+.console-output {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color) !important;
+    min-height: 150px;
+}
+
+/* Progress Bar */
+.progress {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* Alert Styles (Keep existing alert styles) */
+/* ... (keep existing alert styles from previous version) ... */
+
+/* Dark Mode Overrides */
+.dark-mode .navbar-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.dark-mode .form-control {
+    background-color: #2d2d2d;
+    border-color: #404040;
+    color: var(--dark-text);
+}
+
+.dark-mode .form-select {
+    background-color: #2d2d2d;
+    border-color: #404040;
+    color: var(--dark-text);
+}
+
+.dark-mode .input-group-text {
+    background-color: #404040;
+    border-color: #404040;
+    color: var(--dark-text);
+}
+/* Icons Fix */
+.bi::before {
+    display: inline-block;
+    font-family: "bootstrap-icons" !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+}
+
+/* Dark mode icon colors */
+.dark-mode .btn-link.text-dark {
+    color: var(--text-color) !important;
+}
+
+.dark-mode .sidebar-header button {
+    color: var(--text-color) !important;
+}
+.console-output {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color) !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+pre {
+    background-color: inherit;
+    border: inherit;
+    color: inherit;
+}
+/* Scrollbar styling for dark mode */
+.dark-mode ::-webkit-scrollbar {
+    width: 8px;
+    background-color: #2d2d2d;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+    background-color: #404040;
+    border-radius: 4px;
+}
