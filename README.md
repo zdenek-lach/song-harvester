@@ -2,6 +2,9 @@
 
 Song Harvester is a tool designed to help you collect your favorite songs from various sources. It allows you to create a personalized music library with ease.
 
+## Download
+- [HERE](https://github.com/zdenek-lach/song-harvester/releases/tag/1.2.0)
+
 ## Features
 
 - **Multi-source Collection**: Gather songs (even with videos) from different platforms.
@@ -29,8 +32,8 @@ Enjoy collecting and organizing your favorite songs!
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. 
 
 ## Contact
 
-For any questions or suggestions, please open an issue or contact us at Discord! @Sidonius
+For any questions or suggestions, please open an issue or contact me at Discord! @Sidonius
